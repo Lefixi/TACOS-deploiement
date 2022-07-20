@@ -1,0 +1,16 @@
+<h2>MON PANIER =) </h2>
+<ng-template #noMenu>
+  Sélectionnez votre menu pour l'ajouter au panier.
+</ng-template>
+<div *ngIf="menu; else noMenu">
+  <p>Le dernier menu ajouté est le : {{ menu.name }} </p>
+  <button (click)="update(menu)">Ajouter ce menu au panier</button>
+  <!--- <button (click)="delete()">Vider le panier</button> --->
+</div>
+<div *ngIf="prixPanier;">
+  <p>Le prix total du panier est  : {{ prixPanier }} </p>
+  <!--- <button (click)="delete()">Vider le panier</button> --->
+</div>
+
+
+

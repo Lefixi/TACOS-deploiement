@@ -1,0 +1,11 @@
+<h2>Les tacos</h2>
+<!--<table class="table table-striped table-bordered">-->
+<div class="d-flex justify-content-between">
+  <div class="card rounded-3 overflow-hidden" style="width: 25rem;" *ngFor="let t of tacosList">
+    <img class="w-100" src="assets/img/tacos.png" alt="Image de tacos">
+    <div class="card-body">
+      <h3 class="card-title">{{ t.name }}</h3>
+      <p class="card-text">{{ t.price | currency:'EUR':'symbol-narrow' | euro}}</p>
+    </div>
+  </div>
+</div>
